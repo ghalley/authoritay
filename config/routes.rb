@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :another_examples
   devise_for :users
   resources :users
   resources :examples
