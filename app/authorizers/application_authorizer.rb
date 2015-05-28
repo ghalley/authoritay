@@ -13,4 +13,7 @@ class ApplicationAuthorizer < Authority::Authorizer
     true
   end
 
+  def self.authorizes_to_view_something?(user, options = {})
+    user.has_role? :admin
+  end
 end

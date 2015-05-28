@@ -16,7 +16,7 @@
         <td><%= example.title %></td>
         <td><%= link_to 'Show', example %></td>
         <td><%= link_to 'Edit', edit_example_path(example) %></td>
-        <td><%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } if current_user.can_delete?(example) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,3 +25,5 @@
 <br>
 
 <%= link_to 'New Example', new_example_path %>
+
+<%#= 'View Something' if current_user.can?(:view_something) %>
