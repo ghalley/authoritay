@@ -1,7 +1,7 @@
 class AnotherExamplesController < ApplicationController
   before_action :set_another_example, only: [:show, :edit, :update, :destroy]
   authorize_actions_for AnotherExample
-  authority_actions :breed => 'create', :vaporize => 'delete'
+  # authority_actions :breed => 'create', :vaporize => 'delete'
 
   # GET /another_examples
   # GET /another_examples.json
